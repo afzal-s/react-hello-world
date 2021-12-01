@@ -5,13 +5,24 @@ import logo from './assets/logo.png';
 
 const App = () => {
   const [title, setTitle] = useState("World");
+  const [error, setError] = useState("");
 
   const openBridgelabz = () => {
     window.open("https://www.bridgelabz.com/");
   }
 
   const nameChange = (event) => {
-    setTitle(event.target.value);
+    const nameRegex = new RegExp('^[A-Z]{1}[A-Za-z\\s]{2,}$');  
+    
+    if(nameRegex.test(event.target.value)){
+      setTitle(event.target.value);
+    }  
+
+    if (nameRegex.test(event.target.value)) {
+      setError("");
+    } else {
+      setError("Invalid Name");
+    }
   }
 
   return (
@@ -21,6 +32,7 @@ const App = () => {
       <div className="inputBox">
         <input className="input" placeholder="Enter Your Name" type="text" onChange={nameChange} />
       </div>
+      <p className="error">{error}</p>
     </div>
   );
 }

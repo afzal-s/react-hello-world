@@ -71,3 +71,9 @@ body {
     border-color: rgb(216, 209, 223);
 }
 
+.error {
+    color: red;
+    position: relative;
+    left: 40%;
+    font-style: italic;
+}
