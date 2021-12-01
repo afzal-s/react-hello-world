@@ -45,4 +45,5 @@ body {
     display: block;
     margin: 0 auto;
     width: 25%;
+    cursor: pointer;
 }
