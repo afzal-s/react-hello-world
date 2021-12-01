@@ -50,7 +50,7 @@ body {
 .inputBox {
     position: relative;
     left: 25%;
-    margin: 10px 0px;
+    margin-bottom: 15px;
     width: calc(100% / 2 - 20px );
 }
 
@@ -63,12 +63,10 @@ body {
     border-radius: 5px;
     border-bottom-width: 2px;
     transition: all 0.3s ease-in-out;
-
 }
 
-.inputBox .input:focus, 
-.inputBox .input:valid {
-    border-color: rgb(216, 209, 223);
+.inputBox .input:focus {
+    border-color: wheat;
 }
 
 .error {
@@ -76,4 +74,13 @@ body {
     position: relative;
     left: 40%;
     font-style: italic;
+    margin: 5px;
+}
+
+.list {
+    margin: 10px 0px 10px 20px;
+}
+
+.line-space {
+    margin: 10px 0;
 }
